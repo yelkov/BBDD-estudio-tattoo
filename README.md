@@ -76,8 +76,8 @@ El conjunto formado por la descripción de la cita y su fecha y hora no podrá r
 # Diccionario de datos
 
 Resumen :
-- tablas: ` 14 (9 entidades, 2 multivaluados, 3 relaciones N:M)`
-- claves foráneas: `15 (5 rel. + 6 N:M + 2 especializaciones + 2 multivaluados)`
+- tablas: ` 15 (10 entidades, 2 multivaluados, 3 relaciones N:M)`
+- claves foráneas: `16 (6 relaciones + 6 N:M + 2 especializaciones + 2 multivaluados)`
 
 
 ### 1.Tabla: Trabajadores
