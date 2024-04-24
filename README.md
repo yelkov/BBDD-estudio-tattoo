@@ -71,7 +71,7 @@ El conjunto formado por la descripción de la cita y su fecha y hora no podrá r
 
 # Diagrama entidad-relación
 
-![Diagrama](diagrama/Diagrama Entidad-Relacion Estudio Tattoo v2.jpg)
+![Diagrama](diagrama/DiagramaEntidadRelacionEstudioTattoov2.jpg)
 
 # Diccionario de datos
 
