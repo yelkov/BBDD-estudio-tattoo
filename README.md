@@ -173,9 +173,9 @@ Columnas: `10 (7 + 3)`
 
 Claves ajenas:
 
-    tatuador—> citas.tatuador (B:R) / (M:C)
-    anillador—> citas.anillador (B:R) / (M:C)
-    cabina—> citas.cabina (B:R) / (M:C)
+    tatuador—> tatuadores.trabajador (B:R) / (M:C)
+    anillador—> anilladores.trabajador (B:R) / (M:C)
+    cabina—> cabinas.id_cabina (B:R) / (M:C)
 
 Índices:
 
@@ -188,7 +188,7 @@ Claves ajenas:
 | FK_Cabina               | Foreign        |
 
 
-### 5.Tabla: Cabina
+### 5.Tabla: Cabinas
 
 -----------------------------------
 Columnas: `5`
@@ -229,7 +229,7 @@ Columnas: `10  (8 + 2) `
 
 Claves ajenas:
 
-    tutor—> clientes.tutor (B:N) / (M:C)
+    tutor—> tutores_legales.dni (B:N) / (M:C)
 
 Índices:
 
@@ -271,7 +271,7 @@ Columnas: `2`
 
 Claves ajenas:
 
-    Trabajador —> anilladores.trabajador (B:C) (M:C)
+    Trabajador —> trabajadores.id_trabajador (B:C) (M:C)
 
 Índices:
 
@@ -291,7 +291,7 @@ Columnas: `2`
 
 Claves ajenas:
 
-    trabajador —> tatuadores.trabajador (B:C) (M:C)
+    trabajador —> trabajadores.id_trabajador (B:C) (M:C)
 
 Índices:
 
@@ -311,7 +311,7 @@ Columnas: `2`
 
 Claves ajenas:
 
-    Telefono —> telefonos_trabajadores.trabajador (B:C)  (M:C)
+    Trabajador —> trabajadores.id_trabajador (B:C)  (M:C)
 
 Índices:
 
@@ -333,7 +333,7 @@ Columnas: `2`
 
 Claves ajenas:
 
-    Cliente —> alergias_clientes.alergia (B:C) (M:C)
+    Cliente —> clientes.id_cliente  (B:C) (M:C)
 
 Índices:
 
@@ -356,8 +356,8 @@ Columnas: `3`
 
 Claves ajenas:
 
-    cita—> citas_agujas.cita (B:C) (M:C)
-    aguja—> citas_agujas.aguja (B:R) (M:C)
+    cita —> citas.id_cita (B:C) (M:C)
+    aguja —> agujas.id_aguja (B:R) (M:C)
 
 Índices:
 
@@ -381,8 +381,8 @@ Columnas: `3`
 
 Claves ajenas:
 
-    producto —> productos_cabinas.producto (B:C) (M:C)
-    cabina —> productos_cabinas.cabina (B:C)  (M:C)
+    producto —> productos.id_producto (B:C) (M:C)
+    cabina —> cabinas.id_cabina (B:C)  (M:C)
 
 Índices:
 
@@ -404,8 +404,8 @@ Columnas: `2`
 
 Claves ajenas:
 
-    cliente—>citas_clientes.cliente (B:R) / (M:C)
-    cita—>citas_clientes.cita (B:C) / (M:C)
+    cliente —> clientes.id_cliente (B:R) / (M:C)
+    cita —> citas.id_cita (B:C) / (M:C)
 
 Índices:
 
@@ -431,7 +431,7 @@ Columnas: `5`
 
 Claves ajenas:
 
-    cabina—>huecos.cabina (B:C) / (M:C)
+    cabina —> cabinas.id_cabina (B:C) / (M:C)
 
 Índices:
 
