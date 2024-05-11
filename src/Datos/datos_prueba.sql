@@ -26,6 +26,7 @@ INSERT INTO `estudio_tattoo`.`TRABAJADORES` (`NIF`, `NOMBRE`, `NSS`, `FECHA_NACI
 INSERT INTO `estudio_tattoo`.`TRABAJADORES` (`NIF`, `NOMBRE`, `NSS`, `FECHA_NACIMIENTO`, `FECHA_ALTA`, `EMAIL`) VALUES ('44455566K', 'Paco Merlo Toito', '1234568765', '1994-04-12', '2022-10-05', 'paquito.ttt@gmail.com');
 INSERT INTO `estudio_tattoo`.`TRABAJADORES` (`NIF`, `NOMBRE`, `NSS`, `FECHA_NACIMIENTO`, `FECHA_ALTA`, `EMAIL`) VALUES ('11122233T', 'Aitor Tilla Rica', '9998887776', '1993-02-09', '2023-11-23', 'aitor.tattoer@gmail.com');
 UPDATE `estudio_tattoo`.`TRABAJADORES` SET `MENTOR` = '2' WHERE (`ID_TRABAJADOR` = '6');
+UPDATE `estudio_tattoo`.`trabajadores` SET `MENTOR` = '3' WHERE (`ID_TRABAJADOR` = '1');
 
 /*TATUADORES*/
 INSERT INTO `estudio_tattoo`.`TATUADORES` (`TRABAJADOR`, `COMISION`) VALUES ('1', '60');
@@ -74,6 +75,7 @@ INSERT INTO `estudio_tattoo`.`CLIENTES` (`DNI`, `NOMBRE`, `TELEFONO`, `DIRECCIÓ
 /*TUTORES CLIENTES*/
 INSERT INTO `estudio_tattoo`.`TUTORES_LEGALES` (`DNI`, `NOMBRE`, `FECHA_NACIMIENTO`, `TELEFONO`) VALUES ('21156997X', 'Eric Egea Brito', '1950-08-07', '987665544');
 UPDATE `estudio_tattoo`.`CLIENTES` SET `TUTOR` = '21156997X', `PARENTESCO` = 'PADRE/MADRE' WHERE (`ID_CLIENTE` = '12');
+
 
 /*PRODUCTOS*/
 INSERT INTO `estudio_tattoo`.`PRODUCTOS` (`NOMBRE`) VALUES ('vaselina');
