@@ -108,7 +108,7 @@ Columnas: `10  (8 + 2) `
 | DNI                      | Char(9)              | Sí                | Sí          | Alternative Key |
 | Nombre                   | Varchar(30)          | Sí                | No          | - |
 | Telefono                 | Varchar(15)          | Sí                | Sí          | Alternative Key |
-| Dirección                | Varchar(30)          | Sí                | No          | - |
+| Dirección                | Varchar(60)          | Sí                | No          | - |
 | Fecha_Nacimiento         | Date                 | Sí                | No          | - |
 | Instagram                | Varchar(30)          | No                | No          | - |
 | Email                    | Varchar(30)          | No                | No          | - |
