@@ -200,13 +200,13 @@ Claves ajenas:
 
 -----------------------------------
 
-Columnas: `3`
+Columnas: `2`
 
 | Identificador de columna | Tipo de dato/ Rango | R. Obligatoriedad | R. Unicidad | Índice |
 |--------------------------|----------------------|-------------------|-------------|--------|
 | ID_Producto              | Integer (auto_increment) | Sí            | Sí          | Primary Key |
 | Nombre                   | Varchar(30)          | Sí                | Sí          | Alternative Key |
-| Fecha_caducidad          | Date                 | Sí                | No          | - |
+
 
 Índices:
 
@@ -419,13 +419,14 @@ Claves ajenas:
 ### 15.Tabla: Productos_cabinas
 
 -----------------------------------
-Columnas: `3`
+Columnas: `4`
 
 | Identificador de columna | Tipo de dato/ Rango | R. Obligatoriedad | R. Unicidad | Índice       |
 |--------------------------|----------------------|-------------------|-------------|--------------|
 | Producto                 | Integer              | Sí                | No          | Foreign Key  |
 | Cabina                   | Integer              | Sí                | No          | Foreign Key  |
 | Cantidad_disponible      | Integer unsigned    | Sí                | No          | -            |
+| Fecha_caducidad          | Date                 | Sí                | No          | - |
 
 
 Claves ajenas:
