@@ -107,7 +107,7 @@ Columnas: `10  (8 + 2) `
 | ID_Cliente               | Integer (auto_increment) | Sí                | Sí          | Primary Key |
 | DNI                      | Char(9)              | Sí                | Sí          | Alternative Key |
 | Nombre                   | Varchar(30)          | Sí                | No          | - |
-| Telefono                 | Varchar(15)          | Sí                | Sí          | Alternative Key |
+| Teléfono                 | Varchar(15)          | Sí                | Sí          | Alternative Key |
 | Dirección                | Varchar(60)          | Sí                | No          | - |
 | Fecha_Nacimiento         | Date                 | Sí                | No          | - |
 | Instagram                | Varchar(30)          | No                | No          | - |
@@ -123,11 +123,11 @@ Claves ajenas:
 Índices:
 
 | Identificador de índice | Tipo de índice |
-|------------------------|----------------|
-| ID_Cliente             | Primary        |
-| AK_DNI                 | Alternative    |
-| AK_Teléfono            | Alternative    |
-| AK_Tutor               | Foreign        |
+|-------------------------|----------------|
+| ID_Cliente              | Primary        |
+| AK_DNI                  | Alternative    |
+| AK_Telefono             | Alternative    |
+| AK_Tutor                | Foreign        |
 
 ### 3.Tabla: Alergias_clientes
 
@@ -168,7 +168,7 @@ Columnas: `4`
 | Identificador de índice | Tipo de índice |
 |-------------------------|----------------|
 | ID_cabina               | Primary        |
-| AK_ubicación            | Alternative    |
+| AK_ubicacion            | Alternative    |
 
 ### 5.Tabla: Huecos
 
@@ -318,7 +318,7 @@ Columnas: `2`
 | Identificador de columna | Tipo de dato/ Rango | R. Obligatoriedad | R. Unicidad | Índice     |
 |--------------------------|----------------------|-------------------|-------------|------------|
 | Trabajador               | Integer              | Sí                | No          | Foreign Key|
-| Telefono                 | Varchar(15)          | Sí                | No          | -          |
+| Teléfono                 | Varchar(15)          | Sí                | No          | -          |
 
 Claves ajenas:
 
@@ -426,7 +426,7 @@ Columnas: `4`
 | Producto                 | Integer              | Sí                | No          | Foreign Key  |
 | Cabina                   | Integer              | Sí                | No          | Foreign Key  |
 | Cantidad_disponible      | Integer unsigned    | Sí                | No          | -            |
-| Fecha_caducidad          | Date                 | Sí                | No          | - |
+| Fecha_caducidad          | Date                 | No                | No          | - |
 
 
 Claves ajenas:
