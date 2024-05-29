@@ -123,11 +123,11 @@ Claves ajenas:
 Índices:
 
 | Identificador de índice | Tipo de índice |
-|-------------------------|----------------|
-| ID_Cliente              | Primary        |
-| AK_DNI                  | Alternative    |
-| AK_Telefono             | Alternative    |
-| AK_Tutor                | Foreign        |
+|------------------------|----------------|
+| ID_Cliente             | Primary        |
+| AK_DNI                 | Alternative    |
+| AK_Teléfono            | Alternative    |
+| AK_Tutor               | Foreign        |
 
 ### 3.Tabla: Alergias_clientes
 
@@ -168,7 +168,7 @@ Columnas: `4`
 | Identificador de índice | Tipo de índice |
 |-------------------------|----------------|
 | ID_cabina               | Primary        |
-| AK_ubicacion            | Alternative    |
+| AK_ubicación            | Alternative    |
 
 ### 5.Tabla: Huecos
 
@@ -177,16 +177,17 @@ Columnas: `5`
 
 | Identificador de columna | Tipo de dato/ Rango | R. Obligatoriedad | R. Unicidad | Índice       |
 |--------------------------|----------------------|-------------------|-------------|--------------|
-| Número                   | Integer              | Sí                | No          | -            |
+| Número                   | Integer unsigned              | Sí                | No          | -            |
 | Hora                     | Time                 | Sí                | No          | -            |
 | Día                      | Date                 | Sí                | No          | -            |
-| Disponibilidad           | Boolean              | Sí                | No          | -            |
-| Cabina                   | Integer              | Sí                | No          | Foreign Key  |
+| Cabina                   | Integer unsigned        | Sí                | No          | Foreign Key  |
+|Cita      | Integer unsigned              | No                | No          | Foreign Key            |
 
 
 Claves ajenas:
 
     cabina —> cabinas.id_cabina (B:C) / (M:C)
+    cita —> citas.id_cita (B:N) / (M:C)
 
 Índices:
 
@@ -195,6 +196,7 @@ Claves ajenas:
 | Número + cabina         | Primary        |
 | AK_Dia_Hora_Cabina      | Alternative    |
 | FK_Cabina_hueco         | Foreign        |
+| FK_Cita_hueco         | Foreign        |
 
 ### 6.Tabla: Productos
 
@@ -318,7 +320,7 @@ Columnas: `2`
 | Identificador de columna | Tipo de dato/ Rango | R. Obligatoriedad | R. Unicidad | Índice     |
 |--------------------------|----------------------|-------------------|-------------|------------|
 | Trabajador               | Integer              | Sí                | No          | Foreign Key|
-| Teléfono                 | Varchar(15)          | Sí                | No          | -          |
+| Telefono                 | Varchar(15)          | Sí                | No          | -          |
 
 Claves ajenas:
 
@@ -342,13 +344,12 @@ Columnas: `10 (7 + 3)`
 |--------------------------|----------------------|-------------------|-------------|--------|
 | ID_cita                  | Integer (auto_increment) | Sí            | Sí          | Primary Key |
 | Tipo                     | Enum                 | Sí                | No          | - |
-| Fecha_hora               | Datetime             | Sí                | No          | - |
 | Descripción              | Varchar(60)          | Sí                | No          | - |
 | Señal                    | Float                | Sí                | No          | - |
 | Precio                   | Float                | Sí                | No          | - |
 | Estado                   | Enum                 | Sí                | No          | - |
-| Tatuador                 | Integer              | ¿?                | ¿?          | Foreign Key |
-| Anillador                | Integer              | ¿?                | ¿?          | Foreign Key |
+| Tatuador                 | Integer              | No (Sí para tipo tatuaje)             | No          | Foreign Key |
+| Anillador                | Integer              | No (Sí para tipo piercing)              | No          | Foreign Key |
 | Cabina                   | Integer              | Sí                | No |-|
 
 Claves ajenas:
@@ -362,7 +363,7 @@ Claves ajenas:
 | Identificador de índice | Tipo de índice |
 |-------------------------|----------------|
 | ID_Cita                 | Primary        |
-| AK_Fecha_hora_cabina    | Alternative    |
+| AK_Descripcion_cabina    | Alternative    |
 | FK_Tatuador             | Foreign        |
 | FK_Anillador            | Foreign        |
 | FK_Cabina               | Foreign        |
